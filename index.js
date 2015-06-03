@@ -36,6 +36,10 @@ var Dropzone = React.createClass({
     this.setState({
       isDragActive: true
     });
+
+    if (this.props.onDragOver) {
+      this.props.onDragOver(e);
+    }
   },
 
   onDrop: function(e) {
